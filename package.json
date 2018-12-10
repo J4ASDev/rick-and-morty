@@ -1,0 +1,31 @@
+{
+  "name": "speakky-webapp",
+  "version": "1.0.0",
+  "main": "./pages/index.jsx",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": "git@bitbucket.org:devoping/speakky-webapp.git",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "await-to-js": "^2.0.1",
+    "immutable": "^4.0.0-rc.12",
+    "isomorphic-fetch": "^2.2.1",
+    "localforage": "^1.7.3",
+    "moment": "^2.22.2",
+    "next": "^7.0.2",
+    "next-redux-wrapper": "^2.0.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-redux": "^5.1.1",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-immutable": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "validator": "^10.9.0"
+  }
+}
