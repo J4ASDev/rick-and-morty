@@ -1,6 +1,6 @@
 const config = {
   api : {
-    host: ''
+    host: 'https://rickandmortyapi.com'
   }
 }
 
