@@ -12,7 +12,7 @@ class _InitialRequests extends Component {
           <meta name="viewport" content="width=device-width, user-scalable=no" />
           <meta charSet='utf-8' />
           <link href="URL" rel="canonical" />
-          <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=K2D:200,400,700" rel="stylesheet" />
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
         </Head>
         <div>
@@ -26,13 +26,14 @@ class _InitialRequests extends Component {
         <style jsx>{`
           :global(body, button, input, textarea, select) {
             margin: 0;
-            font-family: 'Raleway', sans-serif;
-            color: black;
+            font-family: 'K2D', sans-serif;
+            color: #f4f9fd;
+            background: #edf0f6;
           }
 
           :global(a) {
             text-decoration: none;
-            color: black;
+            color: #f4f9fd;
           }
           
           :global(ul, li) {

@@ -16,14 +16,20 @@ class Home extends Component {
       <Layout title="Home">
         <section className="container-character">
           {
-            character.get('general').get('results').map(item => {
+            character.get('general').map(item => {
+              const id = item.get('id')
+              const name = item.get('name')
+              const image = item.get('image')
+
               return (
-                <article className="character-card">
+                <article key={id} className="character-card">
                   <figure className="card-image">
-                    <img src={item.get('image')} alt={item.get('name')}/>
+                    <img src={image} alt={name}/>
                   </figure>
                   <div className="card-description">
-                    <h4>{item.get('name')}</h4>
+                    <Link href={`/specific?id=${id}&name=${name.replace(' ', '_')}`}>
+                      <a><h4>{name}</h4></a>
+                    </Link>
                   </div>
                 </article>
             )})
@@ -37,7 +43,6 @@ class Home extends Component {
         }
 
         .character-card {
-          color: #f4f9fd;
           background: #0d80e5;
           box-shadow: 0px 0px 12px -5px rgba(0,0,0,0.41);
           margin: 5px;
@@ -62,7 +67,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    this.props.actions.character()
+    this.props.actions.characters()
   }
 }
 
