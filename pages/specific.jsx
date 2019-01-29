@@ -24,13 +24,15 @@ class Specific extends Component {
       <Layout>
         <div className="background-one"></div>
         <div className="background-two"></div>
-        <div className="background-image"></div>
+        <div className="lower-polygon"></div>
+        <div className="left-polygon"></div>
+        <div className="background-image-right"></div>
         <header>
           <Back />
           <h1>Profile</h1>
         </header>
         <section className="character-profile">
-          <div></div>
+          <div className="profile-margin"></div>
           <figure className="profile-image">
             <img src={specific.image} alt={specific.name}/>
           </figure>
@@ -42,15 +44,30 @@ class Specific extends Component {
                 <p>Species:</p>
                 <p>Type:</p>
                 <p>Gender:</p>
+                <p>Origin:</p>
+                <p>Location:</p>
               </div>
               <div className="profile-value">
                 <p>{specific.status}</p>
                 <p>{specific.species}</p>
                 <p>{specific.type ? specific.type : 'Unknown'}</p>
                 <p>{specific.gender}</p>
+                <p>{specific.origin}</p>
+                <p>{specific.location}</p>
               </div>
             </div>
           </article>
+        </section>
+        <section className="character-gallery">
+          <figure>
+            <img src={specific.image} alt={specific.name}/>
+          </figure>
+          <figure>
+            <img src={specific.image} alt={specific.name}/>
+          </figure>
+          <figure>
+            <img src={specific.image} alt={specific.name}/>
+          </figure>
         </section>
         <style jsx>{`
 
@@ -75,7 +92,30 @@ class Specific extends Component {
           opacity: 0.9;
         }
 
-        .background-image {
+        .left-polygon {
+          width: 100%;
+          height: 100%;
+          background: #0d76e6;
+          position: absolute;
+          top: 0;
+          left: 0;
+          clip-path: polygon(30% 25%, 30% 75%, 0 100%, 0 0);
+          z-index: -1;
+          opacity: 0.2;
+        }
+
+        .lower-polygon {
+          background: #056cc6;
+          height: 30%;
+          width: 70%;
+          position: absolute;
+          top: 62%;
+          left: 30%;
+          z-index: -1;
+          opacity: 0.7;
+        }
+
+        .background-image-right {
           height: 100%;
           width: 100%;
           background: url(https://vignette.wikia.nocookie.net/rickandmorty/images/3/3e/Rick-and-morty-wallpaper.jpg/revision/latest/scale-to-width-down/1280?cb=20171014062009);
@@ -85,7 +125,7 @@ class Specific extends Component {
           position: absolute;
           top: 0;
           left: 0;
-          z-index: -2;
+          z-index: -3;
         }
 
         header {
@@ -93,12 +133,14 @@ class Specific extends Component {
           grid-template-columns: 200px 1fr;
           justify-items: center;
           align-items: center;
+          margin-bottom: 30px;
         }
 
         .character-profile {
           display: grid;
           grid-template-columns: 20% 250px 1fr;
           gap: 10px;
+          margin-bottom: 70px;
         }
 
         .profile-image {
@@ -120,6 +162,23 @@ class Specific extends Component {
           display: grid;
           grid-template-columns: 30% 1fr;
           gap: 20px;
+        }
+
+        .character-gallery {
+          display: grid;
+          justify-content: end;
+          grid-template-columns: repeat(3, 175px);
+          gap: 20px;
+          margin-right: 10%;
+        }
+
+        .character-gallery figure {
+          margin: 0;
+          width: 100%
+        }
+
+        .character-gallery img {
+          width: 100%
         }
 
         `}</style>

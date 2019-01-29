@@ -30,14 +30,8 @@ function character(state = initialState.get('character'), action) {
           species,
           type,
           gender,
-          origin: {
-            origin_name: action.payload.origin.name,
-            origin_url: action.payload.origin.url
-          },
-          location: {
-            location_name: action.payload.location.name,
-            location_url: action.payload.location.url
-          },
+          origin: action.payload.origin.name,
+          location: action.payload.location.name,
           image,
           episode,
           url,

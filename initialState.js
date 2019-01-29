@@ -11,14 +11,8 @@ export default fromJS({
       species: '',
       type: '',
       gender: '',
-      origin: {
-        origin_name: '',
-        origin_url: ''
-      },
-      location: {
-        location_name: '',
-        location_url: '',
-      },
+      origin_name: '',
+      location_name: '',
       image: '',
       episode: [],
       url: '',
