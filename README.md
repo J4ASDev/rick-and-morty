@@ -1,6 +1,8 @@
 # Rick and Morty with Next.js
 App built on Next.js with Redux integration to see Rick and Morty characters integrated with the API
 
+See app: http://rick-and-morty-nextjs.surge.sh/
+
 ![Profile character](https://i.ibb.co/D4N8j7N/Character-profile.png)
 
 ##  How does it work?
