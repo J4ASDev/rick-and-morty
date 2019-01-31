@@ -24,8 +24,9 @@ export function character(characterId) {
   return async dispatch => {
     const [err, success] = await to(Fetch.get(`character/${characterId}`))
     
-    if(success.id >= 0) onSuccess(dispatch, GET_CHARACTER_SUCCESS, success)
-  
-    return onError(dispatch, GET_CHARACTER_NOTHING, success)
+    
+    if(err) onError(dispatch, GET_CHARACTER_NOTHING, success)
+    
+    return onSuccess(dispatch, GET_CHARACTER_SUCCESS, success)
   }
 }
